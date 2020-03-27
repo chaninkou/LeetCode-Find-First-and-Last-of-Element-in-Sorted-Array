@@ -2,17 +2,19 @@ package binaryTreeCustom;
 
 public class FindIndexOfFirstLastPositionElementFunction {
 	
-	// O(logn) solution cause its like binear search
+	// O(logn) solution cause its like binary search
 	  public int[] searchRange(int[] nums, int target) {
 	        // The starting index of the target
 	        int start = findStartOfTarget(nums, target);
 	        
+	        // If not found, return {-1,-1}
 	        if(start == nums.length || nums[start] != target){
 	            int[] notFound = {-1,-1};
 	            return notFound;
 	        }
 	        
-	        // Find the next index by + 1 since it will get the starting point, and then - 1 will get the previous index which is the end point of the target
+	        // + 1 to the target to get the starting element of next element of end index
+	        // - 1 will get the previous index which is the end point of the target
 	        int end = findStartOfTarget(nums, target + 1) - 1;
 	        
 	        int[] solution = {start, end};
@@ -20,6 +22,7 @@ public class FindIndexOfFirstLastPositionElementFunction {
 	        return solution;
 	    }
 	    
+	  	// This function take O(logn) since its just binary search
 	    private static int findStartOfTarget(int[] nums, int target){
 	        int lowerBound = 0;
 	        
