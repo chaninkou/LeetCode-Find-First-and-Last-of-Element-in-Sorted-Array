@@ -3,6 +3,7 @@ package binaryTreeCustom;
 public class FindIndexOfFirstLastPositionElementFunction {
 	
 	// O(logn) solution cause its like binary search
+	// The input need to be sorted, doesn't matter if there is duplicates
 	  public int[] searchRange(int[] nums, int target) {
 	        // The starting index of the target
 	        int start = findStartOfTarget(nums, target);
@@ -15,6 +16,7 @@ public class FindIndexOfFirstLastPositionElementFunction {
 	        
 	        // + 1 to the target to get the starting element of next element of end index
 	        // - 1 will get the previous index which is the end point of the target
+	        // Doesn't matter if the ending index is the same as starting index
 	        int end = findStartOfTarget(nums, target + 1) - 1;
 	        
 	        int[] solution = {start, end};
