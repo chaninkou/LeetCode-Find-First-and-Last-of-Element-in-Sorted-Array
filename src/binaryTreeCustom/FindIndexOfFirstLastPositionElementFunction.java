@@ -3,7 +3,7 @@ package binaryTreeCustom;
 public class FindIndexOfFirstLastPositionElementFunction {
 	
 	// O(logn) solution cause its like binary search
-	// The input need to be sorted, doesn't matter if there is duplicates
+	// Required input to be sorted, doesn't matter if there is duplicates
 	  public int[] searchRange(int[] nums, int target) {
 	        // The starting index of the target
 	        int start = findStartOfTarget(nums, target);
