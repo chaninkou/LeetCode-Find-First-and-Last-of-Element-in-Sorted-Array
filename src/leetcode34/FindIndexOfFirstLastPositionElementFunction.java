@@ -1,4 +1,4 @@
-package binaryTreeCustom;
+package leetcode34;
 
 public class FindIndexOfFirstLastPositionElementFunction {
 	
